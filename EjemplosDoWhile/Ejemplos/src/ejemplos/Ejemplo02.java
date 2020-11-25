@@ -20,9 +20,14 @@ public class Ejemplo02 {
         double nota;
         boolean bandera = true;
         String salida;
+        double calificaciones=0;
+        int divisor=0;
+        double promedio;
         do{
             System.out.println("Ingrese calificaciones");
             nota = entrada.nextDouble();
+            calificaciones = calificaciones +nota;
+            divisor=divisor+1;
             cadenaFinal = String.format("%s%.2f\n", cadenaFinal, nota);
             entrada.nextLine(); // limpieza de buffer
             
@@ -34,6 +39,8 @@ public class Ejemplo02 {
             }
             
         }while(bandera); // (bandera==true)
-        System.out.printf("Listado de Notas\n%s\n", cadenaFinal);
+        promedio=calificaciones/divisor;
+        System.out.printf("Listado de Notas\n%s\nPromedio final: %.2f\n",
+                cadenaFinal,promedio);
     }
 }

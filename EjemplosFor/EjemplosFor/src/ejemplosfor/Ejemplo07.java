@@ -13,7 +13,8 @@ public class Ejemplo07 {
     public static void main(String[] args) {
         int operacion;
         
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 20; i++) {
+            System.out.printf("Tabla de multiplicar numero: %d",i);
             for (int contador = 1; contador <= 10; contador++) {
                 operacion = i * contador;
                 System.out.printf("%d x %d = %d\n", i, contador, operacion);
